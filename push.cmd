@@ -1,6 +1,10 @@
+
 @echo off
-set /p COMMIT=Enter commit:
+echo "# launch" >> README.md
+git init
 git add .
-git commit -m "%COMMIT%"
-git push origin master
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jwz0703/damn.git
+git push -f origin main
 pause
