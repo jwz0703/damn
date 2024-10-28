@@ -68,10 +68,20 @@
             margin: 1em 0;
             font-weight: 300;
         }
+        /* 新增的下載按鈕樣式 */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
     <div class="bg"></div>
+    <a href="https://download1583.mediafire.com/nvymiz7f0dngZumlif-pKz6SUi533FRMxn-498VHJy-ga_-AAJCBPogc1TvPZGXO7xAty-K19qX2MTmCjLQO0JK1Hs0nE6_mCFnHkxi0NtOYOtxdobOFjZ4IYFB0kx-960HcX580yDw0CmPaSmee496a_bUH10LtM20foCWSVg/i1zreoxn8romlz1/%E8%83%8Cdamn%E5%AD%97_1_1.0_sign.apk" class="btn download-btn">下載應用程式</a>
     <div class="content">
         <h1>背damn字</h1>
         <h2>Help you be damn</h2>
@@ -85,7 +95,7 @@
         window.onload = function() {
             setTimeout(function() {
                 document.querySelector('.bg').style.filter = 'blur(0) brightness(0.7)';
-                var elements = document.querySelectorAll('.content h1, .content h2, .content .btn, .content p');
+                var elements = document.querySelectorAll('.content h1, .content h2, .content .btn, .content p, .download-btn');
                 elements.forEach(function(el) {
                     el.style.opacity = '1';
                     el.style.transform = 'translateY(0)';
